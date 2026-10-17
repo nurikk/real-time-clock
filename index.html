@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2efe7">
+  <meta name="description" content="An ambient clock study: a painter behind glass, a precise moment in front of it.">
+  <title>Real Time — A study in passing time</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="clock.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="Real Time, home"><span class="brand-mark" aria-hidden="true"></span> REAL TIME</a>
+    <span class="edition">Studies in passing time <span class="separator">/</span> No. 001</span>
+    <span class="locality"><span class="live-dot" aria-hidden="true"></span> <span id="zone">Your local time</span></span>
+  </header>
+  <main>
+    <section class="exhibit" aria-labelledby="title">
+      <div class="intro">
+        <p class="eyebrow">An ambient clock study</p>
+        <h1 id="title">Real<br><em>Time.</em></h1>
+        <p class="intro-copy">A figure behind the glass.<br>A moment in front of you.</p>
+      </div>
+      <figure class="timepiece">
+        <div class="clock" id="clock" data-mode="live" data-video-state="loading" data-reduced-motion="false">
+          <div class="glass-scene" aria-hidden="true">
+            <video id="painter" src="assets/painter.mp4" poster="assets/painter-still.jpg" muted playsinline loop preload="auto" tabindex="-1"></video>
+            <div class="glass-light"></div>
+          </div>
+          <svg id="dial" viewBox="0 0 600 600" aria-hidden="true">
+            <g id="ticks"></g>
+            <g class="numerals"><text x="300" y="83">12</text><text x="525" y="308">3</text><text x="300" y="533">6</text><text x="75" y="308">9</text></g>
+            <g class="hands">
+              <path id="hour" d="M 294 322 L 295.5 161 Q 300 153 304.5 161 L 306 322 Z"></path>
+              <path id="minute" d="M 296.5 328 L 297.5 106 Q 300 100 302.5 106 L 303.5 328 Z"></path>
+              <line id="second" x1="300" y1="342" x2="300" y2="91"></line>
+              <circle class="hub" cx="300" cy="300" r="9"></circle>
+              <circle class="pin" cx="300" cy="300" r="3"></circle>
+            </g>
+          </svg>
+        </div>
+        <figcaption>
+          <span id="mode-label" class="eyebrow">Live · local time</span>
+          <time id="digital" aria-label="Current local time">--:--:--</time>
+          <span id="date-label" class="date-label"></span>
+        </figcaption>
+      </figure>
+      <aside class="annotation" aria-label="About the study">
+        <span class="annotation-line" aria-hidden="true"></span>
+        <p class="eyebrow">The quiet work<br>of passing time</p>
+        <p>Human gesture.<br>Mechanical precision.<br>One shared surface.</p>
+      </aside>
+    </section>
+    <div class="toolbar" aria-label="Clock controls">
+      <div class="mode-switch" role="group" aria-label="Time mode">
+        <button id="live" aria-pressed="true">Live</button>
+        <button id="demo" aria-pressed="false">Demo <span>×60</span></button>
+      </div>
+      <p id="video-status" role="status">Loading painter film…</p>
+      <div class="view-controls">
+        <button id="motion" aria-describedby="video-status">Pause film</button>
+        <button id="fullscreen" hidden><span aria-hidden="true">⛶</span> Fullscreen</button>
+      </div>
+    </div>
+    <noscript><p class="no-script">Enable JavaScript for the live hands and controls. The still is a frame from the actual painter film.</p></noscript>
+  </main>
+  <footer>
+    <p>Inspired by Maarten Baas’s <cite>Real Time</cite> / Schiphol Clock.</p>
+    <p>Independent ambient prototype <span class="separator">·</span> AI film, live hands</p>
+  </footer>
+</body>
+</html>

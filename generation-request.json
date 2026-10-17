@@ -1,0 +1,24 @@
+{
+  "source_request": {
+    "model": "google/veo-3.1-fast",
+    "prompt": "Locked-off static frontal camera, single uninterrupted shot, minimalist art installation. An adult male maintenance worker in blue work overalls stands behind a large uniformly milky white frosted glass panel. Full torso and head visible as a soft recognizable silhouette, centred slightly to the right, with generous blank white space all around. He holds a small dark paintbrush in his right hand and makes slow deliberate small wiping and painting movements near the exact centre of the image at chest height, occasionally lowers the arm and pauses. His brush tip touches the glass near the centre. Soft diffuse backlighting, monochrome ivory white and muted blue, realistic human anatomy, quiet museum aesthetic. No clock hands, no clock numbers, no letters, no graphics, no camera movement, no zoom, no cuts. Start and end standing calmly with brush near chest, loopable.",
+    "duration": 8,
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "generate_audio": false,
+    "seed": 24680
+  },
+  "completed_generation": {
+    "model": "Wan 3.0",
+    "model_source": "User-provided completed-generation handoff",
+    "status": "completed",
+    "cost_usd": 0.68,
+    "asset": "assets/painter.mp4",
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 8.033991,
+    "video_codec": "H.264",
+    "frame_rate": 30
+  },
+  "provenance_note": "The saved source request names the earlier Veo attempt, not the completed Wan model. Its prompt is retained verbatim; transfer of every optional request parameter to Wan is not independently verified. Private URLs and provider job identifiers are deliberately omitted."
+}
